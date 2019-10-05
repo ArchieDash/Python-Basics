@@ -26,14 +26,14 @@ class Car():
         self.mileage += miles
 
 
-philo = Dog('Philo', 5, 'brown')
-print(philo.coat())
-mustang = Car('blue', 20_000)
-ferrari = Car('red', 30_000)
-print(f'The {mustang.color} car has {mustang.mileage} miles')
-print(f'The {ferrari.color} car has {ferrari.mileage} miles')
-lamborghini = Car('yellow', 0)
-print(lamborghini)
-lamborghini.drive(100)
-print(lamborghini)
+philo = Dog('Philo', 5, 'brown') #instance of the Dog class
+print(philo.coat()) #call the instance method
+mustang = Car('blue', 20_000) #instance of the Car class
+ferrari = Car('red', 30_000) #instance of the Car class
+print(f'The {mustang.color} car has {mustang.mileage} miles') #interpolation of the instances' params
+print(f'The {ferrari.color} car has {ferrari.mileage} miles') #interpolation of the instances' params
+lamborghini = Car('yellow', 0) #instance of the Car class
+print(lamborghini) #check instance state with __repr__ method
+lamborghini.drive(100) #call the class method to change instance's params
+print(lamborghini) #check instance state with __repr__ method
 time.sleep(8)
