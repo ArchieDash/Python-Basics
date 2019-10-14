@@ -7,6 +7,7 @@ output_pdf = PdfFileWriter() # initialize pdf writer
 cover = PdfFileReader('files/Emperor cover sheet.pdf') # read pdf with cover
 cover = cover.getPage(0) # extract page from pdf with cover
 output_pdf.addPage(cover) # add cover to writer object
+
 for page in input_pdf.pages:
     output_pdf.addPage(page) #add pages from Emperor.pdf to writer object 
 
