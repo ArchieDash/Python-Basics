@@ -2,7 +2,7 @@ import os
 import csv
 
 wd = 'files/'
-with open (os.path.join(wd, 'pastimes.csv'), 'r') as file, open (os.path.join(wd, 'catgorized pastimes.csv'), 'w') as output:
+with open (os.path.join(wd, 'pastimes.csv'), 'r') as file, open (os.path.join(wd, 'categorized pastimes.csv'), 'w') as output:
     data = csv.reader(file)
     categorized = csv.writer(output)
     next(data)  # skipping header
