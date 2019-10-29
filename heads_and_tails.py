@@ -26,6 +26,8 @@ def main():
     num_of_trials = int(input('Number of trials:') or 10_000)
     trials = [len(sequence_generator()) for trial in range(num_of_trials)]
     print(f'Average lenght of sequence is: {(sum(trials)/len(trials)):.2f}')
+    # TODO: aggregate the graph (bars) of the stats
+    # TODO: save data (as table, grapth) to PDF report template
     time.sleep(3)
 
 
