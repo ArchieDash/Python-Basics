@@ -1,6 +1,9 @@
 '''Returns the average length of sequence of flipping coin to get both heads and tails'''
 import time
 import random
+import PyPDF2
+from collections import Counter
+import matplotlib.pyplot as plt
 
 
 def flip_coin():
@@ -25,8 +28,15 @@ def sequence_generator():
 def main():
     num_of_trials = int(input('Number of trials:') or 10_000)
     trials = [len(sequence_generator()) for trial in range(num_of_trials)]
+    results = Counter(trials)
+    print(results)
     print(f'Average lenght of sequence is: {(sum(trials)/len(trials)):.2f}')
     # TODO: aggregate the graph (bars) of the stats
+    plt.bar(results.keys(), results.values())
+    plt.xlabel("Lenght of the sequence")
+    plt.ylabel("Trials count")
+    plt.savefig("Heads&Tails.png")
+    plt.show()
     # TODO: save data (as table, grapth) to PDF report template
     time.sleep(3)
 
