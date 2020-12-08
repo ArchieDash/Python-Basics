@@ -1,4 +1,5 @@
+"""Simple REPL"""
 while True:
-    prompt = input('>> ')
+    prompt = input("(Type 'Q' to quit) >> ")
     if prompt.strip().lower() == 'q':
         break
